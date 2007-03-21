@@ -3,9 +3,13 @@
 YAML Mail Config moves ActionMailer configuration to a YAML file in your 
 <tt>config/</tt> folder, just like your database definitions. 
 
-To use, install the plugin, then create a <tt>config/email.yml</tt>
-file that follows the sample pattern below, but populate with your actual
-SMTP settings.
+Install with:
+
+  script/plugin install svn://rubyforge.org/var/svn/slantwise/yaml_mail_config/trunk yaml_mail_config
+
+To use, simply create a <tt>config/email.yml</tt> file that follows the sample 
+pattern below. (A sample email.yml template file is found in the templates/ 
+directory of this plugin.)
 
 Sample:
 
@@ -18,12 +22,13 @@ Sample:
     password: email_account_password
   production:
     server: mail.domain.com
-    port: 25
+    port: 465
     domain: domain.com
     authentication: login
     username: email_account_login
     password: email_account_password
+    tls: true
   
 
-Thanks to Sébastien Grosjean (http://seb.box.re/) for the idea and the initial
+Thanks to Sebastien Grosjean (http://seb.box.re/) for the idea and the initial
 codebase for this plugin!
