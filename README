@@ -1,0 +1,29 @@
+= YAML Mail Config
+
+YAML Mail Config moves ActionMailer configuration to a YAML file in your 
+<tt>config/</tt> folder, just like your database definitions. 
+
+To use, install the plugin, then create a <tt>config/email.yml</tt>
+file that follows the sample pattern below, but populate with your actual
+SMTP settings.
+
+Sample:
+
+  development:
+    server: mail.domain.com
+    port: 25
+    domain: domain.com
+    authentication: login
+    username: email_account_login
+    password: email_account_password
+  production:
+    server: mail.domain.com
+    port: 25
+    domain: domain.com
+    authentication: login
+    username: email_account_login
+    password: email_account_password
+  
+
+Thanks to Sébastien Grosjean (http://seb.box.re/) for the idea and the initial
+codebase for this plugin!
